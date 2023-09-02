@@ -22,6 +22,7 @@ use App\Http\Controllers\GmailResponseController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+    
 });
 
 Route::match(['get', 'post','put','delete'], '/post_info/{list_name}/{id}', [ApiTestingController::class, 'handleRoute']);
