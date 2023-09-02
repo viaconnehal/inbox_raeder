@@ -22,7 +22,7 @@ use App\Http\Controllers\GmailResponseController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
-    
+
 });
 
 Route::match(['get', 'post','put','delete'], '/post_info/{list_name}/{id}', [ApiTestingController::class, 'handleRoute']);
@@ -44,6 +44,6 @@ Route::middleware(['auth:api'])->group(function() {
     Route::get('/get-model-table', [TestController::class, 'getModelTable']);
     Route::get('/get-model-data', [TestController::class, 'getModelDatas']);
 });
-//
+//ss
 Route::get('/get-response', [GmailResponseController::class, 'getGmailResponse']);
 Route::post('/send-email', [GmailResponseController::class, 'sendMail']);
